@@ -1,0 +1,43 @@
+.how-it-works-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-it-works-main {
+  flex: 1;
+  padding: 73px 0 617px 0;
+}
+
+.how-it-works-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.how-it-works-title {
+  color: #000;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 40px 0;
+}
+
+.how-it-works-placeholder {
+  padding: 40px;
+  border: 2px solid #E2DEFF;
+  border-radius: 10px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.how-it-works-placeholder p {
+  color: #666;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}

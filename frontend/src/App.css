@@ -1,0 +1,58 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1200px) {
+  .home-content,
+  .notification-content,
+  .live-video-content {
+    padding: 0 20px;
+  }
+  
+  .info-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .header-content {
+    padding: 0 20px;
+  }
+  
+  .nav-menu {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-right {
+    align-items: center;
+  }
+  
+  .logo,
+  .header-title {
+    font-size: 28px;
+  }
+  
+  .nav-link {
+    font-size: 20px;
+  }
+}
