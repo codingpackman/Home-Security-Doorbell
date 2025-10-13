@@ -7,7 +7,7 @@ npm install    # only needed the first time
 npm start
 ```
 
-### To Run The Frontend On A Server Hosting On Your PC
+### To Run The Frontend On A Server Hosted On Your PC
 ```bash
 cd <folder you want to store your code>
 npm install    #only do this the first time
