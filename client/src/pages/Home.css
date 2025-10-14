@@ -1,0 +1,114 @@
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 101px 0 266px 0;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 50px;
+}
+
+.info-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 172px;
+}
+
+.purchase-info-section,
+.access-info-section {
+  width: 332px;
+  height: 317px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section-title {
+  width: 313px;
+  height: 112px;
+  color: #000;
+  text-align: center;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 9px 34px 9px;
+}
+
+.section-description {
+  width: 313px;
+  color: #000;
+  text-align: center;
+  font-family: 'Cardo', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 9px 54px 9px;
+}
+
+.purchase-info-section .section-description {
+  height: 60px;
+}
+
+.access-info-section .section-description {
+  height: 78px;
+}
+
+.store-button {
+  width: 332px;
+  height: 57px;
+  border-radius: 10px;
+  background: url('https://api.builder.io/api/v1/image/assets/TEMP/2a4fbe88afdb3d8c22db8e0cd084cf90328a7aa0?width=664') center/cover;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-button {
+  width: 332px;
+  height: 57px;
+  border-radius: 10px;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text {
+  color: #FFF !important;
+  text-align: center;
+  font-family: 'Cardo', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.store-button .button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.login-button:hover {
+  background: #333;
+}
+
+.store-button:hover {
+  opacity: 0.9;
+}
