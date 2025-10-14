@@ -1,0 +1,146 @@
+.notification-hub-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-main {
+  flex: 1;
+  padding: 100px 0 267px 0;
+}
+
+.notification-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 89px;
+}
+
+.page-title {
+  color: #000;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.live-video-button {
+  width: 212px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #E2DEFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-video-button:hover {
+  background: #d4c9ff;
+}
+
+.notification-item {
+  width: 100%;
+  max-width: 1078px;
+  margin: 0 auto;
+}
+
+.notification-card {
+  width: 100%;
+  height: 96px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 33px;
+  position: relative;
+}
+
+.notification-info {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  flex: 1;
+}
+
+.notification-description {
+  color: #000;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+  flex: 1;
+}
+
+.notification-datetime {
+  color: #000;
+  text-align: center;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  width: 172px;
+}
+
+.recording-button {
+  width: 212px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #E2DEFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recording-button:hover {
+  background: #d4c9ff;
+}
+
+.button-text {
+  color: #000;
+  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .notification-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .notification-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .notification-card {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .notification-datetime {
+    width: auto;
+    text-align: left;
+  }
+}

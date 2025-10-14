@@ -1,0 +1,58 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import Home from './pages/Home';
+import NotificationHub from './pages/NotificationHub';
+import LiveVideo from './pages/LiveVideo';
+import Login from './pages/Login';
+import Create from './pages/Create';
+import Store from './pages/Store';
+import OurGoal from './pages/OurGoal';
+import HowItWorks from './pages/HowItWorks';
+import SetupGuide from './pages/SetupGuide';
+import SafetyEthics from './pages/SafetyEthics';
+import Maintenance from './pages/Maintenance';
+import './App.css';
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* Protected routes - require authentication */}
+            <Route 
+              path="/notifications" 
+              element={
+                <ProtectedRoute>
+                  <NotificationHub />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/live-video" 
+              element={
+                <ProtectedRoute>
+                  <LiveVideo />
+                </ProtectedRoute>
+              } 
+            />
+            {/* Public routes */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/our-goal" element={<OurGoal />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/setup-guide" element={<SetupGuide />} />
+            <Route path="/safety-ethics" element={<SafetyEthics />} />
+            <Route path="/maintenance" element={<Maintenance />} />
+          </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
+  );
+}
+
+export default App;
