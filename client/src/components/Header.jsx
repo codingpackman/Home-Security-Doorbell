@@ -24,9 +24,13 @@ const Header = () => {
         
         {isAuthenticated() ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            <span className="nav-link" style={{ cursor: 'default' }}>
+            <Link 
+              to="/notifications" 
+              className="nav-link" 
+              style={{ cursor: 'pointer', textDecoration: 'none' }}
+            >
               Welcome, {user?.username}
-            </span>
+            </Link>
             <button 
               onClick={handleLogout} 
               className="header-title"
