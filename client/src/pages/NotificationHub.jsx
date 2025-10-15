@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Header from '../components/Header';
@@ -8,6 +8,35 @@ import './NotificationHub.css';
 const NotificationHub = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    const fetchNotifications = async () => {
+        const token = localStorage.getItem("token"); // Retrieve token from localStorage
+        console.log("Token being sent:", token); // Debug log
+
+        try {
+            const response = await fetch("http://localhost:5050/notification", {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`, // Pass the token for authentication
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                console.log("Fetched notifications:", data); // Debug log
+                setNotifications(data);
+            } else {
+                console.error("Failed to fetch notifications");
+            }
+        } catch (err) {
+            console.error("Error:", err);
+        }
+    };
+
+    fetchNotifications();
+  }, []);
 
   const handleLiveVideoClick = () => {
     navigate('/live-video');
@@ -29,17 +58,19 @@ const NotificationHub = () => {
             </button>
           </div>
 
-          <div className="notification-item">
-            <div className="notification-card">
-              <div className="notification-info">
-                <div className="notification-description">Notification Description</div>
-                <div className="notification-datetime">Date and Time</div>
+          {notifications.map((notification) => (
+            <div className="notification-item" key={notification._id}>
+              <div className="notification-card">
+                <div className="notification-info">
+                  <div className="notification-description">{notification.notificationType}</div>
+                  <div className="notification-datetime">{notification.dateTime}</div>
+                </div>
+                <button className="recording-button">
+                  <span className="button-text">See Recording</span>
+                </button>
               </div>
-              <button className="recording-button">
-                <span className="button-text">See Recording</span>
-              </button>
             </div>
-          </div>
+          ))}
         </div>
       </main>
 
