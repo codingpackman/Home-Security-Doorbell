@@ -15,5 +15,3 @@ app.use("/notification", notifications);
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 })
-
-//mongodb+srv://doorbell:6ZbZ6ghK88CNxyQt_@@doorbell.duv9kmk.mongodb.net/?retryWrites=true&w=majority&appName=Doorbell
