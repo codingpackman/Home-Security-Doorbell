@@ -3,13 +3,14 @@
   -  The Frontend handles all the routing and page layouts.
   -  The backend handles the database and all of the doorbell login information stored in the database.
   -  **NEW: JWT Token Authentication System** - Users stay logged in after authentication
-  -  **NEW: Notifications collection added** - New collection storing all notifications to all doorbells
   -  When adding credentials into the create account page, the username, password (encrypted), and doorbellID will be added to the database.
   -  Passwords are now encrypted using bcryptjs for security
   -  JWT tokens are generated on login/registration and stored in localStorage
   -  Protected routes (/notifications, /live-video) require authentication
   -  The Database requires a password to be accessed in config.env file.
   -  You can use your own database password or get the one I am currently using.
+  -  **NEW: Notifications collection added** - New collection storing all notifications to all doorbells
+  -  Notifications are listed out on the notification page for the doorbellID associated to the current token your login in with
   -  **IMPORTANT:** Please do not push any database passwords or JWT secrets as that is sensitive information.
 
 ### Quick Setup (Clones Current Branch And Runs The Website) 
