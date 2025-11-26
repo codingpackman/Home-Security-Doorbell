@@ -26,6 +26,7 @@ const Login = () => {
 
       if (response.ok) {
         // Save token and user info
+        localStorage.setItem("token", data.token); // Store token in localStorage
         login(data.token, data.user);
         // Navigate to notifications after successful login
         navigate('/notifications');
