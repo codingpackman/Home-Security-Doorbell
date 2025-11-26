@@ -9,6 +9,8 @@
   -  Protected routes (/notifications, /live-video) require authentication
   -  The Database requires a password to be accessed in config.env file.
   -  You can use your own database password or get the one I am currently using.
+  -  **NEW: Notifications collection added** - New collection storing all notifications to all doorbells
+  -  Notifications are listed out on the notification page for the doorbellID associated to the current token your login in with
   -  **IMPORTANT:** Please do not push any database passwords or JWT secrets as that is sensitive information.
 
 ### Quick Setup (Clones Current Branch And Runs The Website) 
