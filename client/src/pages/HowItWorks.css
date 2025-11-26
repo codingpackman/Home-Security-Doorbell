@@ -1,43 +1,141 @@
 .how-it-works-page {
   width: 100%;
   min-height: 100vh;
-  background: #FFF;
+  background: #f8f9fa; /* Softer background for readability */
   display: flex;
   flex-direction: column;
 }
 
 .how-it-works-main {
   flex: 1;
-  padding: 73px 0 617px 0;
+  padding: 60px 0;
 }
 
 .how-it-works-content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0 40px;
 }
 
 .how-it-works-title {
-  color: #000;
+  color: #1a1a1a;
   font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0 0 40px 0;
-}
-
-.how-it-works-placeholder {
-  padding: 40px;
-  border: 2px solid #E2DEFF;
-  border-radius: 10px;
+  font-size: 36px;
+  font-weight: 600;
   text-align: center;
-  background: #f9f9f9;
+  margin-bottom: 60px;
 }
 
-.how-it-works-placeholder p {
-  color: #666;
-  font-family: 'Milonga', -apple-system, Roboto, Helvetica, sans-serif;
+/* Introduction Section */
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
   font-size: 18px;
-  margin: 10px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Workflow Steps (The 3 icons section) */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.workflow-card {
+  background: #FFF;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid #E2DEFF;
+}
+
+.workflow-card:hover {
+  transform: translateY(-5px);
+  border-bottom-color: #6c5ce7;
+}
+
+.step-number {
+  background: #E2DEFF;
+  color: #6c5ce7;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+  font-family: 'Milonga', sans-serif;
+}
+
+.workflow-card h3 {
+  font-family: 'Milonga', sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.workflow-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Tech Deep Dive Section */
+.tech-section {
+  background: #FFF;
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.tech-header {
+  font-family: 'Milonga', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  border-left: 5px solid #6c5ce7;
+  padding-left: 20px;
+}
+
+.sensor-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sensor-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sensor-details li {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #E2DEFF;
+}
+
+.sensor-details strong {
+  display: block;
+  font-size: 18px;
+  color: #2d3436;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .sensor-diagram {
+    grid-template-columns: 1fr;
+  }
+  .tech-section {
+    padding: 30px;
+  }
 }

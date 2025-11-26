@@ -25,7 +25,7 @@ const Home = () => {
         <div className="home-content">
           <div className="info-sections">
             <div className="purchase-info-section">
-              <h2 className="section-title">Bells Bells Is The New Innovator In The Home Security Industry!</h2>
+              <h2 className="section-title">Snorlax DB Is The New Innovator In The Home Security Industry!</h2>
               <p className="section-description">Want To Get Your Hands On One Of Our Premium Doorbells</p>
               <button className="store-button" onClick={handleStoreClick}>
                 <span className="button-text">Purchase A Doorbell</span>
