@@ -42,6 +42,11 @@ const NotificationHub = () => {
     navigate('/live-video');
   };
 
+  const handleSeeRecordingClick = (recordingPath) => {
+    // Navigate to live-video page with the recording path as a query parameter
+    navigate(`/live-video?video=${encodeURIComponent(recordingPath)}`);
+  };
+
   return (
     <div className="notification-hub-page">
       <Header />
@@ -65,7 +70,10 @@ const NotificationHub = () => {
                   <div className="notification-description">{notification.notificationType}</div>
                   <div className="notification-datetime">{notification.dateTime}</div>
                 </div>
-                <button className="recording-button">
+                <button 
+                  className="recording-button"
+                  onClick={() => handleSeeRecordingClick(notification.recordingPath)}
+                >
                   <span className="button-text">See Recording</span>
                 </button>
               </div>

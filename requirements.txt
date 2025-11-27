@@ -1,4 +1,0 @@
-# AWS S3 Video Upload Script Dependencies
-boto3>=1.26.0
-botocore>=1.29.0
-

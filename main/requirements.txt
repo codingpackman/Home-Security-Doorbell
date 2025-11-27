@@ -1,0 +1,19 @@
+# Smart Doorbell System Dependencies
+
+# AWS S3 Video Upload
+boto3>=1.26.0
+botocore>=1.29.0
+
+# MongoDB Database
+pymongo>=4.0.0
+
+# GPIO and Hardware Control (Raspberry Pi)
+gpiozero>=2.0.0
+RPi.GPIO>=0.7.1
+
+# SPI and I2C Communication (for Arducam)
+spidev>=3.5
+smbus2>=0.4.2
+
+# Additional utilities
+python-dateutil>=2.8.0
