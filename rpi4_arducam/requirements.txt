@@ -1,0 +1,5 @@
+# Python dependencies for Arducam OV2640 on Raspberry Pi 4
+spidev>=3.5
+smbus2>=0.4.1
+RPi.GPIO>=0.7.1
+
